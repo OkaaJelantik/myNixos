@@ -4,9 +4,9 @@
 
     programs.git = {
       enable = true;
-      userName = "Oka Jelantik";
-      userEmail = "okajelantikstdy@gmail.com";
-      extraConfig.init.defaultBranch = "main";
+      settings.user.name = "Oka Jelantik";
+      settings.user.email = "okajelantikstdy@gmail.com";
+      settings.extraConfig.init.defaultBranch = "main";
     };
 
     home.stateVersion = "26.05";

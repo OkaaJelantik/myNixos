@@ -7,5 +7,14 @@
 
     home.username = "lann";
     home.homeDirectory = "/home/lann";
+
+    home.packages = with pkgs; [
+      fastfetch
+      neovim
+      firefox
+      texlivePackages.jetbrainsmono-otf
+      nerd-fonts.symbols-only
+    ];
+
   };
 }
