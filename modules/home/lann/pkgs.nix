@@ -5,8 +5,12 @@
       neovim
       firefox
       github-cli
-      texlivePackages.jetbrainsmono-otf
+      jetbrains-mono
       nerd-fonts.symbols-only
+      ranger
+      mpv
+      mpvpaper
+      btop
     ];
   };
 }

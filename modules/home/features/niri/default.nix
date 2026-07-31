@@ -7,9 +7,7 @@
     };
 
     home.packages = with pkgs; [
-      fuzzel
       brightnessctl
-      swaybg
       wl-mirror
       jq
     ];

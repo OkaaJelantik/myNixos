@@ -1,7 +1,6 @@
 { self, inputs, ... }: {
   flake.nixosModules.niri-desktop-unstable = { config, pkgs, lib, ... }: {
     imports = [
-      inputs.niri-flake.nixosModules.niri
     ];
 
     nixpkgs.overlays = [ inputs.niri-flake.overlays.niri ];
@@ -9,6 +8,7 @@
       enable = true;
       package = pkgs.niri-unstable;
     };
+
 
     services.pipewire = {
       enable = true;
