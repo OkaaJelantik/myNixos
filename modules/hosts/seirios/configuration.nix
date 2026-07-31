@@ -9,6 +9,10 @@
 
     networking.hostName = "seirios";
     time.timeZone = "Asia/Makassar";
+    hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
 
     programs.zsh.enable = true;
 
@@ -32,5 +36,9 @@
         };
       };
     };
+
+    environment.systemPackages = with pkgs; [
+      upower
+    ];
   };
 }

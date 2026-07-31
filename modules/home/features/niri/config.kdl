@@ -31,8 +31,6 @@ layout {
     gaps 15
     center-focused-column "never"
 
-    empty-workspace-above-first
-
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -62,18 +60,10 @@ layout {
 }
 
 // Startup
-spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/lann/Pictures/Wallpapers/default.jpg"
+spawn-at-startup "noctalia"
 
 // Preferences
 prefer-no-csd
-
-cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 14
-    hide-when-typing
-    hide-after-inactive-ms 5000
-}
 
 screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
 
@@ -99,10 +89,11 @@ window-rule {
 binds {
     "Mod+Shift+E" { quit; }
     "Mod+Shift+R" { spawn "niri" "msg" "action" "reload-config"; }
-    "Mod+P" { spawn-sh "wl-mirror $(niri msg --json focused output | jq -r .name)"; }
 
-    "Mod+D"      { spawn "fuzzel"; }
-    "Mod+T" { spawn "kitty"; }
+    "Mod+D"      { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    "Mod+S"	 { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    "Mod+P"	 { spawn "noctalia" "msg" "panel-toggle" "elijaharch/wl-screen-mirror:controls"; }
+    "Mod+T"      { spawn "kitty"; }
 
     "Mod+Q"       { close-window; }
     "Mod+F"       { maximize-column; }
