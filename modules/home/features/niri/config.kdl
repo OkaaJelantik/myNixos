@@ -28,8 +28,10 @@ output "eDP-1" {
 
 // Layout
 layout {
-    gaps 10
+    gaps 15
     center-focused-column "never"
+
+    empty-workspace-above-first
 
     preset-column-widths {
         proportion 0.33333
@@ -41,7 +43,7 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 3
+        width 2
         active-color "#b4befe"
         inactive-color "#313244"
     }
@@ -97,6 +99,7 @@ window-rule {
 binds {
     "Mod+Shift+E" { quit; }
     "Mod+Shift+R" { spawn "niri" "msg" "action" "reload-config"; }
+    "Mod+P" { spawn-sh "wl-mirror $(niri msg --json focused output | jq -r .name)"; }
 
     "Mod+D"      { spawn "fuzzel"; }
     "Mod+T" { spawn "kitty"; }

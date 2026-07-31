@@ -1,5 +1,5 @@
-{ self, inputs, ... }: {
-  flake.homeModules.lann-waybar = { config, lib, pkgs, ... }: {
+{ ... }: {
+  flake.homeModules.waybar = { config, lib, pkgs, ... }: {
     
     programs.waybar = {
       enable = true;
