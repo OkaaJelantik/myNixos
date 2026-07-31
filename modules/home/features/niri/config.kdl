@@ -21,6 +21,10 @@ input {
     }
 }
 
+switch-events {
+    lid-close { spawn "noctalia" "msg" "session" "lock-and-suspend"; }
+}
+
 // Outputs
 output "eDP-1" {
     scale 1.0
@@ -74,27 +78,46 @@ animations {
 
 
 // ===== WINDOW RULES ===== //
-// Border Radius
+// Global
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
 }
-// Transparency
+// Inactive
 window-rule {
 	match is-active=false
 	opacity 0.85
 }
 
+// ===== LAYER RULES === //
+layer-rule {
+  match namespace="noctalia-bar-default"
+  background-effect {
+    xray false
+    blur false
+  }
+}
+
+
+
 // Key Binds
 binds {
     "Mod+Shift+E" { quit; }
     "Mod+Shift+R" { spawn "niri" "msg" "action" "reload-config"; }
-
-    "Mod+D"      { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
-    "Mod+S"	 { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+     
+    // Noctalia IPC
     "Mod+P"	 { spawn "noctalia" "msg" "panel-toggle" "elijaharch/wl-screen-mirror:controls"; }
+    "Mod+D"      { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    "Mod+S"      { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    "Mod+Comma"  { spawn "noctalia" "msg" "settings-toggle"; }
+    "Alt+Tab"    { spawn "noctalia" "msg" "window-switcher"; }
+    
+    // Apps
     "Mod+T"      { spawn "kitty"; }
+    "Mod+W"      { spawn "firefox"; }
+    "Mod+E"      { spawn "nautilus"; }
 
+    // Window
     "Mod+Q"       { close-window; }
     "Mod+F"       { maximize-column; }
     "Mod+Shift+F" { fullscreen-window; }
@@ -118,8 +141,8 @@ binds {
     "Mod+Shift+Down"  { move-window-down-or-to-workspace-down; }
     "Mod+Shift+Up"    { move-window-up-or-to-workspace-up; }
 
-    "Mod+Minus"     { set-column-width "-10%"; }
-    "Mod+Equal"     { set-column-width "+10%"; }
+    "Mod+Minus"       { set-column-width "-10%"; }
+    "Mod+Equal"       { set-column-width "+10%"; }
     "Mod+Shift+Minus" { set-window-height "-10%"; }
     "Mod+Shift+Equal" { set-window-height "+10%"; }
 
@@ -133,13 +156,12 @@ binds {
     "Mod+Shift+3" { move-window-to-workspace 3; }
     "Mod+Shift+4" { move-window-to-workspace 4; }
     "Mod+Shift+5" { move-window-to-workspace 5; }
-
-    "XF86AudioRaiseVolume"  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    "XF86AudioLowerVolume"  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    "XF86AudioMute"         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    "XF86AudioMicMute"      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    "XF86MonBrightnessUp"   { spawn "brightnessctl" "set" "+10%"; }
-    "XF86MonBrightnessDown" { spawn "brightnessctl" "set" "10%-"; }
+     
+    "XF86AudioRaiseVolume"  { spawn-sh "noctalia msg volume-up"; }
+    "XF86AudioLowerVolume"  { spawn-sh "noctalia msg volume-down"; }
+    "XF86AudioMute"         { spawn-sh "noctalia msg volume-mute"; }
+    "XF86MonBrightnessUp"   { spawn-sh "noctalia msg brightness-up"; }
+    "XF86MonBrightnessDown" { spawn-sh "noctalia msg brightness-down"; }
 
     "Print"            { screenshot; }
     "Ctrl+Print"       { screenshot-screen; }
