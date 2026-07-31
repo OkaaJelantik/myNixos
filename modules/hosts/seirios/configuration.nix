@@ -3,8 +3,6 @@
   flake.nixosModules.seirios-configuration = { config, lib, pkgs, ... }: {
     imports = [
       self.nixosModules.seirios-hardware-configuration
-      self.nixosModules.common
-      self.nixosModules.niri-desktop-unstable
     ];
 
     networking.hostName = "seirios";

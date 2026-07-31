@@ -9,7 +9,7 @@
       config.flake.homeModules.noctalia-shell
       config.flake.homeModules.zsh
       config.flake.homeModules.kitty
-      config.flake.homeModules.theme-catppuccin-mocha
+      config.flake.homeModules.firefox-hardened
       { home.username = "lann"; home.homeDirectory = "/home/lann"; home.stateVersion = "26.05"; }
     ];
   };

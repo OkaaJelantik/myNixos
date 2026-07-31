@@ -24,6 +24,11 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    arkenfox-firefox = {
+      url = "github:dwarfmaster/arkenfox-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
