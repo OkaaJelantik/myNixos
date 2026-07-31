@@ -5,12 +5,10 @@
       neovim
       firefox
       github-cli
-      jetbrains-mono
-      nerd-fonts.symbols-only
       ranger
-      mpv
-      mpvpaper
+      mpv mpvpaper
       btop
+      nautilus trash-cli
     ];
   };
 }
