@@ -7,15 +7,15 @@
       arkenfox = {
         enable = true;
         version = "master";
-    };
-
-    profiles.default.arkenfox = {
-      enable = true;
-      enableAllSections = true;
-      # STARTUP
-      "0100" = {
-	"0102"."browser.startup.page".value = 3;
       };
+      profiles.default.arkenfox = {
+        enable = true;
+        enableAllSections = true;
+        # STARTUP
+        "0100" = {
+	  "0102"."browser.startup.page".value = 3;
+        };
+        "2800".enable = false;
       };
     };
   };

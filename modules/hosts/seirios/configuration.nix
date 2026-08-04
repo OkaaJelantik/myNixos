@@ -12,6 +12,9 @@
       powerOnBoot = false;
     };
 
+    services.power-profiles-daemon.enable = true;
+    services.upower.enable = true;
+
     programs.zsh.enable = true;
 
     users.users.lann = {
@@ -23,20 +26,21 @@
 
     services.greetd = {
       enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri-session";
-          user = "greeter";
-        };
-	initial_sesssion = {
-	  command = "niri-session";
-	  user = "lann";
-        };
+      settings = rec {
+        initial_session = {
+	        command = "${pkgs.niri}/bin/niri-session";  # bukan tuigreet
+	        user = "lann";
+	      };
+	      default_session = {
+	        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri-session";
+	      }; 
       };
     };
 
-    environment.systemPackages = with pkgs; [
-      upower
-    ];
+    nixpkgs.config.allowUnfreePredicate = pkg:
+      builtins.elem (lib.getName pkg) [ "corefonts" ];
+
+    fonts.packages = with pkgs; [ corefonts ];
+  
   };
 }

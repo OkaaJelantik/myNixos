@@ -10,6 +10,9 @@
       config.flake.homeModules.zsh
       config.flake.homeModules.kitty
       config.flake.homeModules.firefox-hardened
+      config.flake.homeModules.theme-catppuccin-mocha
+      config.flake.homeModules.ytstream
+      config.flake.homeModules.nvim
       { home.username = "lann"; home.homeDirectory = "/home/lann"; home.stateVersion = "26.05"; }
     ];
   };
