@@ -63,6 +63,7 @@
       "locked": {
         "lastModified": 1785627969,
         "narHash": "sha256-4dtXQk/NMePegK/nWp5NSeuZKLATItOq61lpEvmXqGw=",
+<<<<<<< HEAD
         "owner": "hercules-ci",
         "repo": "flake-parts",
         "rev": "427bf4bd9435fdf21321c8cc628c24efc14c0f7a",
@@ -81,9 +82,11 @@
       "locked": {
         "lastModified": 1782949081,
         "narHash": "sha256-vp6Y/Grm98ESt6ceOkWiHWyZRDV3J1RID4w+6NWK9yA=",
+=======
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "17c9d6cdfc60c64f4ee8d306f9bc0b4ccb51481e",
+        "rev": "427bf4bd9435fdf21321c8cc628c24efc14c0f7a",
         "type": "github"
       },
       "original": {
@@ -121,6 +124,7 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1785531816,
         "narHash": "sha256-vkMnV0JIyw+g/NmcfoajlGaAO+9a0ezia+FZohQJrik=",
         "owner": "nix-community",
@@ -147,6 +151,13 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "bf9ce9fec78f95f374e8dd3b503863a3ec128ebe",
+=======
+        "lastModified": 1785958398,
+        "narHash": "sha256-5r/JgsoNMTx+qIh83WkxpujEKBR7PF5ssnh5vYCuSAw=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a7c70cc290290f373f50cd820403833d250459ac",
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "type": "github"
       },
       "original": {
@@ -182,11 +193,19 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1785705919,
         "narHash": "sha256-fkLVrf2tZ/822v+kF2NgXxQD5ugMNTgGlUd7Y1kHEHg=",
         "owner": "sodiboo",
         "repo": "niri-flake",
         "rev": "50e136c5452ae98638d066454391c7ba7e16410a",
+=======
+        "lastModified": 1785857305,
+        "narHash": "sha256-25q05zpF1sqOCxPPUG9DPPGd+EDW7SiAOWCzBWRS7r0=",
+        "owner": "sodiboo",
+        "repo": "niri-flake",
+        "rev": "9ee3e13b60643448228353097880521658b2fe0e",
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "type": "github"
       },
       "original": {
@@ -230,11 +249,19 @@
     },
     "nixpkgs": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1785571196,
         "narHash": "sha256-KoTsyMQqnXQZq8deCEnu4QkyldkwH/bpMMhUcfMdGIw=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+=======
+        "lastModified": 1785828668,
+        "narHash": "sha256-8fsyqeO+mJqvIzeO4xIpgJe/f7MTbbVTEC6RT6WSXNs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "type": "github"
       },
       "original": {
@@ -248,6 +275,7 @@
       "locked": {
         "lastModified": 1785031560,
         "narHash": "sha256-OmshNvn2vupOFpYinLUu+1Dnpu4n7Q5N3ggGVNHpkUI=",
+<<<<<<< HEAD
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
         "rev": "0e79af5e3d4dcfcd676ab5ba3f95d2e3352e078c",
@@ -263,9 +291,11 @@
       "locked": {
         "lastModified": 1782614948,
         "narHash": "sha256-ePjCwr1sNm9NYUqywL7QfK3JnlS015msC+eBu2zKlp8=",
+=======
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
-        "rev": "db3f255737b94216eb71cce308e2912cf6bc2d7c",
+        "rev": "0e79af5e3d4dcfcd676ab5ba3f95d2e3352e078c",
         "type": "github"
       },
       "original": {
@@ -313,11 +343,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1785707827,
         "narHash": "sha256-H70rICsCS/cx4KR1Qryln9HJd0iVekP+8or3OCKvPT0=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
         "rev": "5aae077a3563da6fda3fc2a2b8ce9162e3a42019",
+=======
+        "lastModified": 1785977390,
+        "narHash": "sha256-MRbnC1iik31WtC2BZ0/gU32mCDkHCu6m2KQNJvYgX3s=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "e82b49e928e5581046120110a5fb3a8446e3e3ac",
+>>>>>>> fe73437 (setting flashdisk buat musik)
         "type": "github"
       },
       "original": {
