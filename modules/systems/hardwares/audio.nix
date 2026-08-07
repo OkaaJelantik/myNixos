@@ -1,5 +1,5 @@
 { ...  }: {
-  flake.nixosModules.pipewire = { config, lib, ... }: {
+  flake.nixosModules.pipewire = { config, lib, ... }:
     let
       cfg = config.nixos.pipewire;
     in {
@@ -11,10 +11,9 @@
         services.pipewire = {
           enable = true;
           alsa.enable = true;
-          alsa.support32Bit. = true;
+          alsa.support32Bit.enable = true;
           pulse.enable = true;
          };
       };
     };
-  };
 }

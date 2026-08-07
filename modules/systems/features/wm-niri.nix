@@ -1,5 +1,5 @@
 # Currently Monolithic - For Desktop Only
-{ ... }: {
+{ inputs,  ... }: {
   flake.nixosModules.wm-niri = { config, pkgs, lib, ... }: {
     imports = [];
 
