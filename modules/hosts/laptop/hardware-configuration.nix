@@ -1,6 +1,5 @@
-{ self, inputs, ... }: {
-    
-  flake.nixosModules.seirios-hardware-configuration = { config, lib, pkgs, modulesPath, ... }: {
+{inputs, self, ... }: {
+  flake.nixosModules.hw-laptop = { config, lib, pkgs, modulesPath, ... }: {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
@@ -21,12 +20,16 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+    fileSystems."/home/lann/disk" = {
+      device = "dev/sda1";
+      fsType = "exfat";
+      options = [ "users" "nofail" "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
+    };
+
     swapDevices = [ ];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.intel.updateMicrocode = true;
   };
-
 }
-
 

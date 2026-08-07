@@ -16,8 +16,8 @@
     };
 
     niri-flake = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:rebizzz/niri-flake?ref=fix/libdisplay-info-dep";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia-shell = {

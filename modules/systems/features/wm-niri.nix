@@ -1,7 +1,7 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.niri-desktop-unstable = { config, pkgs, lib, ... }: {
-    imports = [
-    ];
+# Currently Monolithic - For Desktop Only
+{ ... }: {
+  flake.nixosModules.wm-niri = { config, pkgs, lib, ... }: {
+    imports = [];
 
     nixpkgs.overlays = [ inputs.niri-flake.overlays.niri ];
     programs.niri = {
@@ -9,21 +9,22 @@
       package = pkgs.niri-unstable;
     };
 
-
-    services.pipewire = {
+    services.greetd = {
       enable = true;
-      pulse.enable = true;
-      alsa.enable = true;
+      settings = {
+	      default_session = {
+	        command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
+	      }; 
+      };
     };
 
-    security.rtkit.enable = true;
     security.polkit.enable = true;
 
     xdg.portal = {
       enable = true;
       extraPortals = with pkgs; [ 
         xdg-desktop-portal-gtk
-	xdg-desktop-portal-gnome
+	      xdg-desktop-portal-gnome
       ];
       config.common.default = "gtk";
     };

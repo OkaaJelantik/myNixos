@@ -1,5 +1,5 @@
 { ... }: { 
-  flake.homeModules.theme-catppuccin-mocha = { config, lib, pkgs, ... }: {
+  flake.homeModules.theme = { config, lib, pkgs, ... }: {
     gtk = {
       enable = true;
       theme = {

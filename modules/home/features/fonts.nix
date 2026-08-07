@@ -1,5 +1,5 @@
 { ... }: { 
-  flake.homeModules.lann-fonts = { config, pkgs, ... }: {
+  flake.homeModules.fonts = { config, pkgs, ... }: {
   
     fonts.fontconfig.enable = true;
 

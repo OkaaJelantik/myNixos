@@ -8,10 +8,10 @@
 
       shellAliases = {
         nixos-update = "sudo nixos-rebuild switch --flake /home/lann/myNixos/.";
-	nixos-test = "sudo nixos-rebuild test --flake /home/lann/myNixos/.";
-	home-update = "home-manager switch --flake /home/lann/myNixos/.";
-	home-test = "home-manager build --flake /home/lann/myNixos/. && /home/lann/myNixos/result/activate";
-	ll = "ls -l";
+	      nixos-test = "sudo nixos-rebuild test --flake /home/lann/myNixos/.";
+	      home-update = "home-manager switch --flake /home/lann/myNixos/.";
+	      home-test = "home-manager build --flake /home/lann/myNixos/. && /home/lann/myNixos/result/activate";
+	      ll = "ls -l";
       };
 
       history.size = 10000;
@@ -25,9 +25,9 @@
       enableZshIntegration = true;
       settings = {
         add_newline = false;
-	command_timeout = 1300;
-	scan_timeout = 50;
-	format = "$username$hostname$directory$git_branch$git_status$nix_shell$character";
+	      command_timeout = 1300;
+	      scan_timeout = 50;
+	      format = "$username$hostname$directory$git_branch$git_status$nix_shell$character";
           character = {
           success_symbol = "[❯](bold green)";
           error_symbol = "[❯](bold red)";
