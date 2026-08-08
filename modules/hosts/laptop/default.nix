@@ -4,6 +4,7 @@
       # General
       self.nixosModules.hosts-laptop
       self.nixosModules.systems-features
+      inputs.agenix.nixosModules.default
       # Etc
       self.nixosModules.wm-niri # unstable branch
       
@@ -21,6 +22,12 @@
           enable = true;
           provider = "cloudflare";
         };
+
+        # Utility
+        nixos.aria2 = {
+            enable = true;
+            daemon = true;
+        };
         # =========================== #
       }
 
@@ -28,8 +35,8 @@
         # ===== Services ===== # 
         services.power-profiles-daemon.enable = true;
         services.upower.enable = true;
-        #services.aria2.enable = true;
         services.udisks2.enable = true;
+        services.openssh.enable = true;
         # ==================== #
       }
     ];

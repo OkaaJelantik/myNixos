@@ -25,6 +25,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix = { 
+      url = "github:ryantm/agenix"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     arkenfox-firefox = {
       url = "github:dwarfmaster/arkenfox-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
