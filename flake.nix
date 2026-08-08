@@ -17,7 +17,7 @@
 
     niri-flake = {
       url = "github:rebizzz/niri-flake?ref=fix/libdisplay-info-dep";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia-shell = {
@@ -32,6 +32,11 @@
 
     nvimdots = {
       url = "github:ayamir/nvimdots";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

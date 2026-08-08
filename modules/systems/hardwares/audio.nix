@@ -11,7 +11,6 @@
         services.pipewire = {
           enable = true;
           alsa.enable = true;
-          alsa.support32Bit.enable = true;
           pulse.enable = true;
          };
       };

@@ -9,10 +9,10 @@
             "1.1.1.1#one.one.one.one"
             "1.0.0.1#one.one.one.one"
           ];
-          resolvedExtra = {
-            dnssec = "true";
-            domains = [ "~." ];
-            fallbackDns = [
+          resolvedSettings = {
+            DNSSEC = "true";
+            Domains = [ "~." ];
+            FallbackDNS = [
               "1.1.1.1#one.one.one.one"
               "1.0.0.1#one.one.one.one"
             ];
@@ -25,7 +25,7 @@
             "45.90.30.0#cf2869.dns.nextdns.io"
             "2a07:a8c1::#cf2869.dns.nextdns.io"
           ];
-          resolvedExtra = { };
+          resolvedSettings = { };
         };
       };
     in {
@@ -43,8 +43,10 @@
 
         services.resolved = {
           enable = true;
-          dnsovertls = "true";
-        } // providers.${cfg.provider}.resolvedExtra;
+          settings.Resolve = {
+            DNSOverTLS = "yes";
+          } // providers.${cfg.provider}.resolvedSettings;
+        };
       };
     };
 }

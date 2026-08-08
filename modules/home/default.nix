@@ -8,14 +8,21 @@
       inputs.self.homeModules.git
       inputs.self.homeModules.firefox-hardened
       inputs.self.homeModules.zsh
-      inputs.self.homeMoudles.nvim
+      inputs.self.homeModules.kitty
+      inputs.self.homeModules.nvim
       inputs.self.homeModules.theme
+      inputs.self.homeModules.antigravity
+      inputs.self.homeModules.unmanaged
 
       {
         home.username = "lann";
         home.homeDirectory = "/home/lann";
         home.stateVersion = "26.05";
+        nixpkgs.config.allowUnfree = true;
+        nixpkgs.config.allowUnfreePredicate = (_: true);
+
       }
+
     ];
   };
 }

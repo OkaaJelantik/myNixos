@@ -1,7 +1,7 @@
 { ... }: {
     flake.homeModules.unmanaged = { config, pkgs, ... }: {
       home.packages = with pkgs; [
-        fatfetch
+        fastfetch
         ranger
         mpv
         nautilus trash-cli

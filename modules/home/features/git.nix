@@ -1,4 +1,4 @@
-{ ... }: {
+{ inputs, ...  }: {
   flake.homeModules.git = { pkgs, ... }: {
     programs.git = {
       enable = true;
@@ -6,6 +6,8 @@
       settings.user.email = "okajelantikstdy@gmail.com";
       settings.extraConfig.init.defaultBranch = "main";
     };
-    programs.github-cli.enable = true;
+    home.packages = with pkgs; [
+      github-cli
+    ];
   };
 }

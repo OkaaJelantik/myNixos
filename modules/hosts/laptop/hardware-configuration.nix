@@ -21,7 +21,7 @@
     };
 
     fileSystems."/home/lann/disk" = {
-      device = "dev/sda1";
+      device = "/dev/sda1";
       fsType = "exfat";
       options = [ "users" "nofail" "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
     };

@@ -6,6 +6,7 @@
     ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nixpkgs.config.allowUnfree = true;
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -21,15 +22,9 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" "video" "audio" "aria" ];
       home = "/home/lann";
+      shell = pkgs.zsh;
     };
-
-    environment.systemPackages = with pkgs; [
-      git
-      vim
-      wget
-      htop
-      inputs.home-manager.packages.${pkgs.system}.home-manager
-    ];
+    programs.zsh.enable = true;
 
     system.stateVersion = "26.05";
   };
