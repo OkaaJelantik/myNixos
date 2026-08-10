@@ -20,10 +20,10 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-    fileSystems."/home/lann/disk" = {
-      device = "/dev/sda1";
-      fsType = "exfat";
-      options = [ "users" "nofail" "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
+    fileSystems."/home/lann/arch" = {
+      device = "/dev/nvme0n1p6";
+      fsType = "ext4";
+      options = [ "users" ];
     };
 
     swapDevices = [ ];

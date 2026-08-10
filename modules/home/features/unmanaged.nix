@@ -10,6 +10,7 @@
         unzip
         python3
         python3Packages.pip
+        qbittorrent
       ];
   };
 }
