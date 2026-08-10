@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin-nix  = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix = { 
       url = "github:ryantm/agenix"; 
       inputs.nixpkgs.follows = "nixpkgs";

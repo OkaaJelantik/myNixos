@@ -20,12 +20,6 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-    fileSystems."/home/lann/arch" = {
-      device = "/dev/nvme0n1p6";
-      fsType = "ext4";
-      options = [ "users" ];
-    };
-
     swapDevices = [ ];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

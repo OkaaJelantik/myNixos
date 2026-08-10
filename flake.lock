@@ -66,6 +66,26 @@
         "type": "github"
       }
     },
+    "catppuccin-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786309022,
+        "narHash": "sha256-Bn1EFvCd74JZXJs3pxUdfEMhls3/yuJre4O1owI6oe8=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "9e84aa294455c58a1caba475902d06c1170ed5c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -486,6 +506,7 @@
         "agenix": "agenix",
         "antigravity-nix": "antigravity-nix",
         "arkenfox-firefox": "arkenfox-firefox",
+        "catppuccin-nix": "catppuccin-nix",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
