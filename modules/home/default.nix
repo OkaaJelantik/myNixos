@@ -4,13 +4,13 @@
     modules = [
       inputs.self.homeModules.niri
       inputs.self.homeModules.noctalia-shell
+      inputs.self.homeModules.catppuccin-nix
       inputs.self.homeModules.fonts
       inputs.self.homeModules.git
       inputs.self.homeModules.firefox-hardened
       inputs.self.homeModules.zsh
       inputs.self.homeModules.kitty
       inputs.self.homeModules.nvim
-      inputs.self.homeModules.theme
       inputs.self.homeModules.antigravity
       inputs.self.homeModules.unmanaged
 
