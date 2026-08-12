@@ -4,7 +4,6 @@
     modules = [
       inputs.self.homeModules.niri
       inputs.self.homeModules.noctalia-shell
-      inputs.self.homeModules.catppuccin-nix
       inputs.self.homeModules.fonts
       inputs.self.homeModules.git
       inputs.self.homeModules.firefox-hardened
@@ -12,15 +11,13 @@
       inputs.self.homeModules.kitty
       inputs.self.homeModules.nvim
       inputs.self.homeModules.antigravity
+      inputs.self.homeModules.spotify
       inputs.self.homeModules.unmanaged
 
       {
         home.username = "lann";
         home.homeDirectory = "/home/lann";
         home.stateVersion = "26.05";
-        nixpkgs.config.allowUnfree = true;
-        nixpkgs.config.allowUnfreePredicate = (_: true);
-
       }
 
     ];

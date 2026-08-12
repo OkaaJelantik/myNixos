@@ -15,7 +15,6 @@
         "0100" = {
 	  "0102"."browser.startup.page".value = 3;
         };
-        "2800".enable = false;
       };
     };
   };
