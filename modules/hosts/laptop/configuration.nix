@@ -20,7 +20,7 @@
 
     users.users.lann = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "video" "audio" "aria2" ];
+      extraGroups = [ "wheel" "networkmanager" "video" "audio"];
       home = "/home/lann";
       shell = pkgs.zsh;
     };

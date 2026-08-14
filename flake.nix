@@ -16,7 +16,7 @@
     };
 
     niri-flake = {
-      url = "github:rebizzz/niri-flake?ref=fix/libdisplay-info-dep";
+      url = "github:rebizzz/niri-flake";
       #url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };

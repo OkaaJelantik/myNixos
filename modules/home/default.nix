@@ -13,7 +13,6 @@
       inputs.self.homeModules.antigravity
       inputs.self.homeModules.spotify
       inputs.self.homeModules.unmanaged
-
       {
         home.username = "lann";
         home.homeDirectory = "/home/lann";

@@ -4,6 +4,7 @@
       # General
       self.nixosModules.hosts-laptop
       self.nixosModules.systems-features
+      self.nixosModules.labs
       inputs.agenix.nixosModules.default
       # Etc
       self.nixosModules.wm-niri # unstable branch
@@ -28,7 +29,7 @@
             enable = true;
             daemon = true;
         };
-        # =========================== #
+
       }
 
       {

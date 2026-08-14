@@ -169,4 +169,8 @@ binds {
     "Print"            { screenshot; }
     "Ctrl+Print"       { screenshot-screen; }
     "Alt+Print"        { screenshot-window; }
+
+    // Screen Recording
+    "Mod+Print"        { spawn-sh "mkdir -p ~/Videos && wl-screenrec --no-hw -f ~/Videos/screenrec_$(date +%Y-%m-%d_%H-%M-%S).mp4"; }
+    "Mod+Shift+Print"  { spawn-sh "killall -SIGINT wl-screenrec"; }
 }

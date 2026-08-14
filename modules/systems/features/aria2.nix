@@ -2,6 +2,7 @@
   flake.nixosModules.aria2 = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.aria2;
+      username = config.nixos.mainUser;
     in {
       options.nixos.aria2 = {
         enable = lib.mkEnableOption "Aria2";
@@ -25,6 +26,8 @@
           enable = cfg.daemon;
           rpcSecretFile = config.age.secrets.aria2-secret.path;
         };
+
+        users.users.${username}.extraGroups = [ "aria2" ];
       };
     };
 }

@@ -16,13 +16,16 @@
 
     qt = {
       enable = true;
-      platformTheme.name = "gtk3";
+      platformTheme.name = "qt6ct";
+      style.name = "kvantum";
     };
 
     home.packages = with pkgs; [
       brightnessctl
       wl-mirror
+      wl-screenrec
       jq
+      qt6Packages.qt6ct qt6Packages.qtstyleplugin-kvantum 
     ];
   };
 }
