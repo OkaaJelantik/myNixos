@@ -7,7 +7,7 @@
       self.nixosModules.labs
       inputs.agenix.nixosModules.default
       # Etc
-      self.nixosModules.wm-niri # unstable branch
+      self.nixosModules.wm-niri
       
       {
         # ===== Modules Options ===== #
@@ -29,7 +29,14 @@
             enable = true;
             daemon = true;
         };
-
+        
+        # Niri WM 
+        nixos.niri = {
+          enable = true;
+          package = "main";
+          autologin = true;
+          xsupport = true;
+        };
       }
 
       {
