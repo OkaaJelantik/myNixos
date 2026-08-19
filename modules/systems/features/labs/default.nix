@@ -9,13 +9,13 @@
       self.nixosModules.labs-terminal
     ];
 
-    config = {
-      nixos.labs.virtualization.enable = lib.mkDefault true;
-      nixos.labs.packetCapture.enable = lib.mkDefault true;
-      nixos.labs.gns3.enable = lib.mkDefault true;
-      nixos.labs.networkRecon.enable = lib.mkDefault true;
-      nixos.labs.tftp.enable = lib.mkDefault true;
-      nixos.labs.terminal.enable = lib.mkDefault true;
+    config.nixos.labs = {
+      virtualization.enable = lib.mkDefault true;
+      packetCapture.enable = lib.mkDefault true;
+      gns3.enable = lib.mkDefault true;
+      networkRecon.enable = lib.mkDefault true;
+      tftp.enable = lib.mkDefault true;
+      terminal.enable = lib.mkDefault true;
     };
   };
 }
