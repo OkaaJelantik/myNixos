@@ -18,7 +18,7 @@
       programs.firefox = {
         enable = true;
         arkenfox = {
-          enable = ${cfg.hardened};
+          enable = cfg.hardened;
           version = "master";
         };
         profiles.default.arkenfox = {

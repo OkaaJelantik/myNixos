@@ -46,7 +46,7 @@
         services.openssh.enable = true;
         # ==================== #
       }
-      ./configuration.nix
+      self.nixosModules.hosts-laptop
     ];
   };
 }

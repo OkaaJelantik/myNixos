@@ -4,7 +4,7 @@
     cfg = config.home.kitty;
   in {
     options.home.kitty = {
-      enable = lib.mkEnableOption "Enable Kitty Terminal"
+      enable = lib.mkEnableOption "Enable Kitty Terminal";
     };
 
     config = lib.mkIf cfg.enable {

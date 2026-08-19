@@ -18,7 +18,7 @@
           ];
         };
       }
-      ./configuration.nix
+      self.nixosModules.hosts-wsl
     ];
   };
 }
