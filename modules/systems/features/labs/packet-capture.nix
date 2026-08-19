@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-packet-capture = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.packetCapture;

@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ...  }: {
-  flake.homeModules.ytstream = { ... }:
+{ ... }: {
+  flake.homeModules.ytstream = { config, lib, pkgs, ... }:
   let
     cfg = config.home.ytstream;
     ytradio = pkgs.writeShellScriptBin "ytstream" ''
@@ -40,15 +40,15 @@
     '';
   in {
     options.home.ytstream = {
-      enable = lib.mkEnableOption "Simple music streaming"
+      enable = lib.mkEnableOption "Simple music streaming";
     };
 
     config = lib.mkIf cfg.enable {
       home.packages = [
-        ytstream
-        ffmpeg
-        yt-dlp
+        ytradio
+        pkgs.ffmpeg
+        pkgs.yt-dlp
       ];
-    }
+    };
   };
 }

@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-terminal = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.terminal;

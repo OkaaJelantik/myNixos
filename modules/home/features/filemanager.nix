@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }: {
-  flake.homeModules.filemanager = { ... }:
+{ ... }: {
+  flake.homeModules.filemanager = { config, lib, pkgs, ... }:
   let 
     cfg = config.home.filemanager;
   in {
@@ -21,10 +21,8 @@
 
     config = lib.mkIf cfg.enable {
       home.packages = lib.mkMerge [
-        [ranger]
-        (lib.mkIf (cfg.gui)
-          [${cfg.gui-selected}]
-        )
+        [ pkgs.ranger ]
+        (lib.mkIf cfg.gui [ pkgs.${cfg.gui-selected} ])
       ];
     };
   };

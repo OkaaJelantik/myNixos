@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-    flake.homeModules.unmanaged = { ... }: {
+{ ... }: {
+    flake.homeModules.unmanaged = { pkgs, ... }: {
       home.packages = with pkgs; [
         pavucontrol
         unzip

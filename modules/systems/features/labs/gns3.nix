@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-gns3 = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.gns3;

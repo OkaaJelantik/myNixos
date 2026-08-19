@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-tftp = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.tftp;

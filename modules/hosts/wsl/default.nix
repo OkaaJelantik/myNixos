@@ -11,10 +11,8 @@
           imports = [
             self.homeModules.profile-cli
             {
-              config.home = {
-                antigravity.enable = true;
-                nvim.enable = false;
-              };
+              home.antigravity.enable = true;
+              home.nvim.enable = false;
               home.stateVersion = "26.05";
             }
           ];

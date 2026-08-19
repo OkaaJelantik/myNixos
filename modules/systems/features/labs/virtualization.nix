@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-virtualization = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.virtualization;

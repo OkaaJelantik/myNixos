@@ -8,10 +8,10 @@
 
     options.home.spotify = {
       enable = lib.mkEnableOption "Spotify Streaming Music";
-      sptietify = lib.mkOption {
+      spicetify = lib.mkOption {
         type = lib.types.bool;
         default = true;
-        descriptions = "enable spicetify patch";
+        description = "enable spicetify patch";
       };
     };
 
@@ -39,11 +39,11 @@
         };
       })
 
-      (lib.mkIf !(cfg.!spicetify) {
-        home.packages = with pkgs; [spotify];
+      (lib.mkIf (!cfg.spicetify) {
+        home.packages = with pkgs; [ spotify ];
       })
 
-    ])
+    ]);
 
   };
 }

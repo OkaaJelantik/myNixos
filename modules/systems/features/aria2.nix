@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }: {
-  flake.nixosModules.aria2 = { ... }:
+{ ... }: {
+  flake.nixosModules.aria2 = { config, lib, pkgs,... }:
     let
       cfg = config.nixos.aria2;
       username = config.nixos.mainUser;

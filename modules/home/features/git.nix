@@ -1,10 +1,10 @@
-{ config, lib, pkgs, ...  }: {
-  flake.homeModules.git = { ... }: 
+{ ... }: {
+  flake.homeModules.git = { config, lib, pkgs, ... }: 
     let 
-      cfg = config.home.git
+      cfg = config.home.git;
     in {
-      option.home.git = {
-          enable = lib.mkEnableOption "Git Configuration"
+      options.home.git = {
+          enable = lib.mkEnableOption "Git Configuration";
       };
 
       config = lib.mkIf cfg.enable {
@@ -17,6 +17,6 @@
         home.packages = with pkgs; [
           github-cli
         ];
-      }
-  };
+      };
+    };
 }

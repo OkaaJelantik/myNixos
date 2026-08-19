@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.labs-network-recon = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.labs.networkRecon;

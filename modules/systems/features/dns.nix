@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }: {
-  flake.nixosModules.dns = { ... }:
+{ ... }: {
+  flake.nixosModules.dns = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.dns;
 

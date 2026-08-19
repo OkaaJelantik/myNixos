@@ -1,5 +1,5 @@
-{ config, lib, pkgs,  ... }: {
-  flake.homeModules.nvim = { ... }: 
+{ ... }: {
+  flake.homeModules.nvim = { config, lib, pkgs, ... }: 
   let 
     cfg = config.home.nvim;
   in {

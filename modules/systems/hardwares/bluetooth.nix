@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ...  }: {
-  flake.nixosModules.bluetooth = { ... }: 
+{ ...  }: {
+  flake.nixosModules.bluetooth = { config, lib, pkgs, ... }: 
     let
       cfg = config.nixos.bluetooth;
     in {

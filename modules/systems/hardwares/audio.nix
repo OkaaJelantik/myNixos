@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }: {
-  flake.nixosModules.pipewire = { ... }:
+{ ... }: {
+  flake.nixosModules.pipewire = { config, lib, pkgs, ... }:
     let
       cfg = config.nixos.pipewire;
     in {

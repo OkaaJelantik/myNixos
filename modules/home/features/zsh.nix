@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }: {
-  flake.homeModules.zsh = { ... }:  
+{ ... }: {
+  flake.homeModules.zsh = { config, lib, pkgs, ... }:  
     let
       cfg = config.home.zsh;
       flakePath = "${config.home.homeDirectory}/myNixos";

@@ -1,5 +1,5 @@
-{ config, lib, pkgs,  ... }: {
-  flake.homeModules.kitty = { ... }: 
+{ ... }: {
+  flake.homeModules.kitty = { config, lib, pkgs, ... }: 
   let 
     cfg = config.home.kitty;
   in {
