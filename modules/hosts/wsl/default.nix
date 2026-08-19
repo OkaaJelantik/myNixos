@@ -10,7 +10,6 @@
         home-manager.users.lann = {
           imports = [
             self.homeModules.profile-cli
-
             {
               config.home = {
                 antigravity.enable = true;

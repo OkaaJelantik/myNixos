@@ -2,7 +2,6 @@
   flake.nixosConfigurations.seirios = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       # General
-      self.nixosModules.hosts-laptop
       self.nixosModules.systems-features
       self.nixosModules.labs
       inputs.agenix.nixosModules.default
@@ -47,6 +46,7 @@
         services.openssh.enable = true;
         # ==================== #
       }
+      ./configuration.nix
     ];
   };
 }
