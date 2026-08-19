@@ -12,7 +12,10 @@
             self.homeModules.profile-cli
 
             {
-              config.home.antigravity.enable = true;
+              config.home = {
+                antigravity.enable = true;
+                nvim.enable = false;
+              };
               home.stateVersion = "26.05";
             }
           ];

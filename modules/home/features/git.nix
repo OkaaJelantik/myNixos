@@ -1,5 +1,5 @@
 { config, lib, pkgs, ...  }: {
-  flake.homeModules.git = { config, lib, pkgs,  ... }: 
+  flake.homeModules.git = { ... }: 
     let 
       cfg = config.home.git
     in {

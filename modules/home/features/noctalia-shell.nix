@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.noctalia-shell = { config, pkgs, ... }: {
+  flake.homeModules.noctalia-shell = { config, lib, pkgs, ... }: {
     imports = [ inputs.noctalia-shell.homeModules.default ];
 
     programs.noctalia = {

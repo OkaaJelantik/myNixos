@@ -1,5 +1,5 @@
-{ ... }: {
-  flake.homeModules.niri = { config, lib, pkgs, ... }: {
+{ config, lib, pkgs, ...  }: {
+  flake.homeModules.niri = { ... }: {
 
     xdg.configFile."niri/config.kdl" = {
       source = ./config.kdl;
